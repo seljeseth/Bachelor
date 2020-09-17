@@ -12,8 +12,10 @@ require("./routes/appRoutes")(app);
 // Setup hot reload (refresh web page on client changes)
 let listen = new Promise((resolve, reject) =>
 {
-	reload(app).then(reloader => {
-		app.listen(3001, (error) => {
+	reload(app).then(reloader =>
+	{
+		app.listen(3001, (error) =>
+		{
 			if (error) reject(error.message);
 			console.log('Server running...');
 			reloader.reload();

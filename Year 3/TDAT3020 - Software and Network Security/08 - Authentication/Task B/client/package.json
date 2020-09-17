@@ -35,7 +35,9 @@
   "devDependencies": {
     "@material-ui/core": "^4.9.5",
     "axios": "^0.19.2",
+    "crypto-js": "^4.0.0",
     "history": "^4.10.1",
+    "jsonwebtoken": "^8.5.1",
     "react-router-dom": "^5.1.2"
   }
 }

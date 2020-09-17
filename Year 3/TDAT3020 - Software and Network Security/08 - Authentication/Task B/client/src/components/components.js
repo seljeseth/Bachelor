@@ -12,7 +12,7 @@ const boxProps = {
 
 export default function ButtonBox(text, func)
 {
-	let bool = text === 'Check Server Status';
+	let bool = text === 'Password: Passord123';
 	return (
 		<Box {...boxProps}>
 			<Button variant = {bool ? 'outlined' : 'contained'}
