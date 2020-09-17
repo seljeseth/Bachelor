@@ -1,0 +1,7 @@
+Oppgave 1
+
+Hva er optimistisk låsing?
+
+Optimistisk låsing lager et ekstra felt i databasetabell som oppdateres hver gang noen skriver til objektet.
+Om noen har oppdatert verdiene i raden du har lest verdiene fra vil du få en OptimisticLockException.
+Dette forteller deg at lockverdien du leste før du begynte har endret seg.
