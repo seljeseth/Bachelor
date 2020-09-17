@@ -1,0 +1,11 @@
+--- oppgave_1.cpp	2020-08-26 14:36:37.478739055 +0200
++++ oppgave_1_v2.cpp	2020-08-26 14:43:58.600124655 +0200
+@@ -1,7 +1,6 @@
+ #include <iostream>
+ using namespace std;
+ int main(){
+-	cout << "Dette er orginal settninga" << endl;
++	cout << "Dette er den oppdaterte setningen" << endl;
+ 	return 0;
+ }
+-

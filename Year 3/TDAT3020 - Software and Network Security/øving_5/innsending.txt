@@ -1,0 +1,5 @@
+1. wget http://ait.idi.ntnu.no/fag/lsd/repo/script/fargedemo for å laste ned fargedemo
+2.
+5. Aksentene gjør at vi kan bruke outputtet fra kommandoen i det som blir skrevet ut. I dette tilfelle vil den skrive ut hvem brukeren er siden whoami vil kjøres og erstattes med svaret vi får. Å hostname vil bli erstattet med navnet på maskinen.
+6. */2 8-12,13-16 * * 1-5 root killall quake (sjekker i arbeidstinden)
+   30/2 12 * * 1-5 root killall quake (sjekker i lunsjen)  

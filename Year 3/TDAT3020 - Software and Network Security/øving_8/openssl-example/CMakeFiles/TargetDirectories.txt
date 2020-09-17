@@ -1,0 +1,3 @@
+/home/sabine/øvinger/øving_8/openssl-example/CMakeFiles/rebuild_cache.dir
+/home/sabine/øvinger/øving_8/openssl-example/CMakeFiles/edit_cache.dir
+/home/sabine/øvinger/øving_8/openssl-example/CMakeFiles/example.dir

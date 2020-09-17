@@ -1,0 +1,6 @@
+#! /bin/sh
+
+#cp file.doc newfile.do
+
+find ~/øvinger/øving_5 -name "*.txt" -exec cp {} {}.kopi \;
+

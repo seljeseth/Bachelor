@@ -1,0 +1,4 @@
+#! /bin/sh
+#Script for å komprimere filer som er mer enn ei uke gammel
+
+find ~/øvinger/øving_5 -mtime +7 -exec gzip {} \;
