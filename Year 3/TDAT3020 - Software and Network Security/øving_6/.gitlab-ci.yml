@@ -1,0 +1,11 @@
+image: ubuntu:latest
+stages: 
+    - fuzzing
+
+fuzzing:
+    stage: fuzzing
+    script:
+        - apt-get update
+        - apt-get install clang build-essential -y
+        - clang -g -O1 -fsanitize=address,fuzzer fuzzer.c -o fuzzer
+        - ./fuzzer -max_total_time=60

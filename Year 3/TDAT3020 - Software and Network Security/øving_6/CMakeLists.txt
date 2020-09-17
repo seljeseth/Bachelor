@@ -1,0 +1,5 @@
+add_executable(fuzzer fuzzer.c)
+target_link_libraries(fuzzer functions)
+target_compile_options(fuzzer PRIVATE -g -fsanitize=address,fuzzer)
+target_link_options(fuzzer PRIVATE -fsanitize=address,fuzzer)
+add_test(NAME fuzzer COMMAND fuzzer)
