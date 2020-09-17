@@ -11,6 +11,5 @@ endif()
 find_package(OpenSSL REQUIRED)
 include_directories(${OPENSSL_INCLUDE_DIR})
 
-add_executable(example example.cpp)
+add_executable(Password_crack Password_crack.cpp)
 target_link_libraries(example ${OPENSSL_CRYPTO_LIBRARY})
-
