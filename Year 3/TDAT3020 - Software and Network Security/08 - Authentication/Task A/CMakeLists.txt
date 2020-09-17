@@ -13,3 +13,4 @@ include_directories(${OPENSSL_INCLUDE_DIR})
 
 add_executable(example example.cpp)
 target_link_libraries(example ${OPENSSL_CRYPTO_LIBRARY})
+
