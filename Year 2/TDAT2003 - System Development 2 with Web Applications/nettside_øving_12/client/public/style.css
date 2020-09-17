@@ -1,0 +1,352 @@
+
+body {
+    background-color: rgba(255, 221, 121, 0.18);
+}
+
+.frontpage {
+    margin: 100px;
+
+}
+
+.frontpage article {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+
+}
+
+.navbar {
+    background-color: #F2A516;
+
+}
+
+nav .nav-link {
+    color: #ffffff !important;
+    font-family: "Arial";
+}
+
+nav .nav-link:hover {
+    color: #000000 !important;
+}
+
+nav .nav-link.active {
+    color: #000000 !important;
+    font-weight: bold;
+
+}
+
+.nav-dropdown .nav-link {
+    color: black;
+    background-color: #F2A516;
+}
+
+
+.karusellkropp {
+    background-color: rgba(255, 198, 19, 0.49);
+
+}
+
+.navlinkkarusell {
+    color: black;
+    font-weight: bold;
+}
+
+.navlinkkarusell:hover {
+    color: rgb(255, 150, 0);
+    font-weight: bold;
+}
+
+.cardkarusell {
+    width: auto;
+    height: 60px;
+    margin: 20px;
+    text-align: center;
+
+}
+
+
+.carousel-control-prev {
+
+    width: 20px;
+}
+
+.carousel-control-next {
+
+    width: 20px;
+
+}
+
+.picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+.artikkel h1 {
+
+    color: black;
+    margin: 10px;
+
+}
+
+.artikkel a:hover {
+
+    color: rgb(255, 150, 0);
+}
+
+
+.artikkel img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    color: black;
+    font-style: italic;
+}
+
+
+.redigeringsvindu input {
+    width: 500px;
+}
+
+
+.artikkeledit {
+
+    text-align: center;
+
+}
+
+.artikkeledit textarea {
+    width: 700px;
+    height: 500px;
+}
+
+.artikkeledit input {
+    width: 500px;
+
+}
+
+.artikkelhovedvindu {
+    border-radius: 10px;
+    margin: 10%;
+    padding-bottom: 2%;
+    background-color: white;
+    white-space: pre-wrap;
+}
+
+.artikkelhovedvindu h1 {
+    font-size: 64px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+
+}
+
+.artikkelhovedvindu img {
+    border-radius: 10px;
+    margin-top: 10%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.artikkelhovedvindu .card {
+    width: auto;
+    border-color: #0da3b0;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+
+.artikkelhovedvindu .card .card-text {
+    margin: 20px;
+
+}
+
+
+.artikkelhovedvindu .card .card-header {
+    background-color: #68c7c7;
+    color: white;
+    font-weight: bold;
+
+
+}
+
+.artikkelhovedvindu .card .card-footer {
+    background-color: #68c7c7;
+    color: white;
+    font-weight: bold;
+
+
+}
+
+.artikkelhovedvindu .card .card-footer .btn-danger {
+
+    border-radius: 10px;
+
+
+}
+
+.artikkelhovedvindu .card .card-footer .btn-danger {
+    margin-left: 30px;
+
+}
+
+.artikkelhovedvindu .card .card-footer .btn-primary {
+    background-color: #f2527d;
+    color: white;
+    border-radius: 10px;
+
+
+}
+
+.artikkelhovedvindu .card .card-footer .btn-primary:hover {
+    background-color: #b14458;
+    color: white;
+    border-radius: 10px;
+
+
+}
+
+.artikkelhovedvindu .card .form-group {
+    margin: 20px;
+
+}
+
+
+.leggTilsakForm {
+    margin-top: 50px;
+    margin-right: 125px;
+    margin-left: 125px;
+    margin-bottom: 125px;
+
+}
+
+.leggTilsakForm .form-label {
+    font-weight: bold;
+
+}
+
+.artikkeleditform {
+    margin-top: 50px;
+    margin-right: 125px;
+    margin-left: 125px;
+    margin-bottom: 125px;
+}
+
+.artikkeleditform .form-label {
+    font-weight: bold;
+
+
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 20px;
+    grid-gap: 20px;
+
+
+}
+
+.grid img {
+    object-fit: contain;
+}
+
+.redigerartikler {
+    margin: 40px;
+}
+
+.kategorivindu {
+    background-color: #f2a516;
+    padding: 20px;
+    font-family: "Arial";
+    color: white;
+    border-radius: 5px;
+
+}
+
+.kategorivindu h3 {
+    font-weight: bold;
+}
+
+.redigersaker nav-link {
+    text-align: center;
+
+
+}
+
+.redigersaker {
+    width: auto;
+    height: 100px;
+    margin: 15px;
+    place-content: center;
+
+
+}
+
+.linkredigersaker {
+    color: black;
+    font-family: Arial;
+    font-size: 24px;
+}
+
+.linkredigersaker:hover {
+    color: #ff9600;
+}
+
+.btn-primary {
+    background-color: #58afaf;
+    border-color: #58afaf;
+    font-family: Arial;
+    margin: 20px;
+    font-weight: bold;
+
+}
+
+.btn-danger {
+    background-color: #e8192c;
+    border-color: #d11a2a;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #d11a2a;
+    border-color: #d11a2a;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+
+.btn-primary:hover {
+    background-color: #0da3b0;
+    border-color: #5aafaf;
+}
+
+.col {
+    text-align: center;
+}
+
+.card-columns {
+    column-count: 2;
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+
+
+}
+
+.card-columns .artikkel:hover {
+    transform: scale(1.01);
+
+
+}
+
+
+
+
+

@@ -1,0 +1,109 @@
+
+
+.navbar {
+    background: rgba(0, 0, 0, 0.93);
+
+
+}
+
+
+.nav-link {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "Arial Black";
+
+}
+
+.nav-link:hover {
+    color: #919191;
+}
+
+.nav-link:last-child {
+    position: fixed;
+    right: 20px;
+
+}
+
+.navbar-brand {
+    color: #ffffff;
+    font-size: 24px;
+    font-family: 'Bungee Inline', cursive;
+}
+
+
+.navbar-brand:hover {
+    color: #4b4b4b;
+
+}
+
+.minside {
+
+}
+
+.header {
+
+}
+
+.picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+}
+
+.artikkel {
+
+    color: black;
+
+}
+
+.artikkel img {
+    width: 440px;
+    height: 220px;
+    color: black;
+    font-style: italic;
+}
+
+
+.redigeringsvindu input {
+    width: 500px;
+}
+
+
+.artikkeledit {
+
+    text-align: center;
+
+}
+
+.artikkeledit textarea {
+    width: 700px;
+    height: 500px;
+}
+
+.artikkeledit input {
+    width: 500px;
+
+}
+
+.artikkelhovedvindu {
+
+
+}
+
+.artikkelhovedvindu h1 {
+    font-size: 64px;
+}
+
+.artikkelhovedvindu img {
+    width: auto;
+    height: auto;
+}

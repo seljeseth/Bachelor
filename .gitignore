@@ -3,6 +3,7 @@
 *.pdf
 # Log file
 *.log
+*.docx
 
 # BlueJ files
 *.ctxt
@@ -67,7 +68,7 @@ out/
 target/
 bin/
 .git-rewrite/
-node_modules/
+*node_modules/
 venv/
 *.ini
 routes/
