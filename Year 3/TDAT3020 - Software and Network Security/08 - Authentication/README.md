@@ -26,3 +26,19 @@ Frivillig: bruk Node.js Crypto (openssl bindinger) på serversiden.
 Når en klient autentiseres, send en access token til klienten som kan brukes,uten å autentisere seg på nytt, i etterfølgende forespørsler.
 Opp til dere hvordan token’en ser ut.
 Gå ut i fra at HTTPS blir brukt (slik at en kan bruke enkle accesstokens/bearer tokens)</i>
+
+For å vise litt hva koden min gjør har jeg satt opp en GUI der brukeren ser hvordan passord som sendes til serveren
+
+
+!["Bilde 1"](Images for readme/Images_a.png)
+
+Om dette passordet stemmer får vi tilbake tokenet
+
+!["Bilde 2"](Images for readme/Images_b.png)
+
+Om det ikke er det passordet som stemmer får vi 401 - error Unauthorized
+
+!["Bilde 3"](Images for readme/Images_c.png)
+
+
+
