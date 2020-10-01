@@ -34,11 +34,38 @@ Dette gjør vi med å :
 ```
 
 ### 2. Micro-CMS v1
-#### FLAG 1
-Merket at om jeg opprettet en ny side ble nummeret på siden 12, men de ut ifra nettsiden så det ut som det kun var 2 sider. Etter å ha 
-#### FLAG 2
-#### FLAG 3
-#### FLAG 4
+#### FLAG 0
+Fant ut at om man la til en ny page fikk den en id som var høyere enn antall pages man så. Etter å ha prøvd å gå inn på de forskjellige pagesene opp til iden min page fikk, fikk jeg tilbakemelding på at den ene pagen var forbidden.: 
 
+</br>
+
+http://34.74.105.127/6a58e1558b/page/4
+
+</br>
+
+Ved å da gå inn på:
+
+</br>
+http://34.74.105.127/6a58e1558b/page/edit/4
+</br>
+
+Fikk jeg opp siden med flagget.
+</br>
+
+#### FLAG 1
+Dette fant jeg ved å SQLinjection:
+</br>
+http://34.74.105.127/6a58e1558b/page/edit/2'
+</br>
+
+#### FLAG 2
+Om vi endrer en page sin overskrift til å includere et script slik som
+</br>
+`(<script>alert()</script>)`
+</br>
+Vil flagget komme i alerten som kjøres når vi går til hovedsiden.
+
+#### FLAG 3
+Om vi legger til en knapp når vi oppretter en side, og deretter går inn på inspiser vil flagge dukke opp i knappen.
 
 
