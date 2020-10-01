@@ -35,20 +35,15 @@ Dette gjør vi med å :
 
 ### 2. Micro-CMS v1
 #### FLAG 0
-Fant ut at om man la til en ny page fikk den en id som var høyere enn antall pages man så. Etter å ha prøvd å gå inn på de forskjellige pagesene opp til iden min page fikk, fikk jeg tilbakemelding på at den ene pagen var forbidden.: 
+Fant ut at om man la til en ny page fikk den en id som var høyere enn antall pages man så. Etter å ha prøvd å gå inn på de forskjellige pagesene opp til iden min page fikk, fikk jeg tilbakemelding på at den ene pagen var forbidden: 
 
 </br>
-
 http://34.74.105.127/6a58e1558b/page/4
-
 </br>
-
 Ved å da gå inn på:
-
 </br>
 http://34.74.105.127/6a58e1558b/page/edit/4
 </br>
-
 Fikk jeg opp siden med flagget.
 </br>
 
