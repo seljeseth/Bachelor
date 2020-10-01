@@ -1,0 +1,6 @@
+#! /bin/sh
+DOMAIN=$1
+
+#printf "Checking domain: " $DOMAIN\n
+
+grep -w "v=spf1" nslookup -type=txt $DOMAIN 
