@@ -1,8 +1,9 @@
 #!/bin/bash
 
 DOMAIN=$1
-printf "MX\n"
-declare -a IPv4
+
+
+printf "MX for: %s" $DOMAIN
 #printer tjenestemaskin navnene uten tallene foran slik at vi kan sende dem igjennom nslookup uten problemer
 SERVERS=`nslookup -type=mx $DOMAIN | grep -o 'mail exchanger.*' | cut -d "=" -f 2 | awk '{$2=$2};1' | cut -d " " -f 2`
 for server in ${SERVERS[@]};
@@ -11,15 +12,36 @@ do
  	IPv4=`nslookup $server | grep Address: | tail -n 2 | head -n 1 | cut -d " " -f 2` 
 	IPv6=`nslookup $server | grep Address: | tail -n 1 | cut -d " " -f 2`
 	
-	printf 'DOMAIN:%s \nIPv4: %s\nIPv6: %s\n\n' $server $IPv4 $IPv6
+	printf '\n\nDOMAIN: %s \nIPv4: %s\nIPv6: %s\nReverse:\n'  $server $IPv4 $IPv6
+
+	nslookup $IPv4 | grep 'name'
+	nslookup $IPv6 | grep 'name'
+
+	printf "\n"
 done
 
-printf 'Reversoppslag:\n'
-for ip in ${IPv4[@]}
-do
-	reverse=`nslookup $ip | grep "name"`
-	printf 'ip:%s\n %s' $ip  $reverse
-done
+printf "SPF1 for: %s\n" $DOMAIN
 
-#nslookup -type=txt $DOMAIN | grep -o 'spf1.*'
+spf1_lookup () {
+    `nslookup -type=txt $1 | grep "spf1" | grep -oP '(?<=include:)(\s+)?\K([^ "]*)'\|'(?<=redirect=)(\s+)?\K([^ "]*)'`
+}
+
+#Sjekker om det finnes noen flere som kan sende mail fra domene med å følge includene
+check () {
+
+    includes=(`nslookup -type=txt $1 | grep "spf1" | grep -oP '(?<=include:)(\s+)?\K([^ "]*)'\|'(?<=redirect=)(\s+)?\K([^ "]*)'`)
+    nslookup -type=txt $1 | grep "spf1" | grep -oP '(?<=ip4:)(\s+)?\K([^ ]*)'
+    nslookup -type=txt $1 | grep "spf1" | grep -oP '(?<=ip6:)(\s+)?\K([^ ]*)'
+
+    if [ -n "$spf1_lookup $1" ] ; 
+    then
+        for ip in ${includes[@]}
+        do  
+            echo $ip
+            check $ip
+        done
+    fi
+}
+
+check $DOMAIN
 
