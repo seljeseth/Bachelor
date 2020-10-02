@@ -1,6 +1,25 @@
-#! /bin/sh
+#!/bin/bash
+
 DOMAIN=$1
+printf "MX\n"
+declare -a IPv4
+#printer tjenestemaskin navnene uten tallene foran slik at vi kan sende dem igjennom nslookup uten problemer
+SERVERS=`nslookup -type=mx $DOMAIN | grep -o 'mail exchanger.*' | cut -d "=" -f 2 | awk '{$2=$2};1' | cut -d " " -f 2`
+for server in ${SERVERS[@]};
+do
 
-#printf "Checking domain: " $DOMAIN\n
+ 	IPv4=`nslookup $server | grep Address: | tail -n 2 | head -n 1 | cut -d " " -f 2` 
+	IPv6=`nslookup $server | grep Address: | tail -n 1 | cut -d " " -f 2`
+	
+	printf 'DOMAIN:%s \nIPv4: %s\nIPv6: %s\n\n' $server $IPv4 $IPv6
+done
 
-grep -w "v=spf1" nslookup -type=txt $DOMAIN 
+printf 'Reversoppslag:\n'
+for ip in ${IPv4[@]}
+do
+	reverse=`nslookup $ip | grep "name"`
+	printf 'ip:%s\n %s' $ip  $reverse
+done
+
+#nslookup -type=txt $DOMAIN | grep -o 'spf1.*'
+
