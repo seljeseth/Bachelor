@@ -437,5 +437,6 @@ ASALocalRun/
 Year 3/TDAT3020 - Software and Network Security/08 - Authentication/Task B/client/.DS_Store
 Year 3/TDAT3020 - Software and Network Security/08 - Authentication/Task B/server/.DS_Store
 Year 3/TDAT3020 - Software and Network Security/10 - Common software vulnerabilities/name
+Year 3/TDAT3020 - Software and Network Security/12 - Reverse engineering/myshop
 *.swo
 *.pcapng
