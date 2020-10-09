@@ -6,7 +6,7 @@ Problemet med myshop.py er at den er sårbar for SQL injection. Dette er fordi i
 numrows = cur.execute("SELECT price FROM products WHERE id = %s" % barcode)
 ```
 Om vår barcode f.eks. ser slik ut:
-![barcode](barcode.png)
+![barcode](barcode.png)  
  vil databasen tolke dette som:
  ```SQL
 SELECT price FROM products WHERE id = 1010101011010; UPDATE products SET price = 1;
