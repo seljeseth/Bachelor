@@ -17,3 +17,12 @@ dette vil dermed vises som en vulnerability. Kjører dermed prrogrammet på nytt
 ![second](second_run_last_pic.png)
 
 ## NIDS
+Lastet ned snort for denne delen av øvingen.
+Lager en regel i filen local.rules som gjør at vi får beskjed når vi blir pinget, regelen ser slik ut  
+![rules](local_rules.png)  
+
+Pinger broadcast adressen til maskinen  
+
+![ping1](ping2.png)
+Vi ser at regelen vi skrev gir oss beskjed om at vi blir pinget, og hvem som pinget
+![ping2](ping.png)
