@@ -4,5 +4,5 @@ Bruker kommandoen :
 nmcli d wifi
 ```
 og får opp nettverkene:  
-![networks](networks.png)
+![networks](networks.png)  
 Ut i fra dette ser vi at kanal 64 ikke har så mye trafikk, dermed kunne dette vært et godt valg for en ny kanal.
